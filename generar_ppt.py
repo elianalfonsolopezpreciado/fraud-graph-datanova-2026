@@ -17,9 +17,7 @@ DEMO_URL = "https://fraud-graph-datanova-2026.streamlit.app/"
 REPO_URL = "https://github.com/elianalfonsolopezpreciado/fraud-graph-datanova-2026"
 VIDEO_URL = ""  # optional: paste the YouTube link when the video exists
 # -----------------------------------------------------------------------------------
-LINKS = f"Demo: {DEMO_URL}
-Code: {REPO_URL}" + (f"
-Video: {VIDEO_URL}" if VIDEO_URL else "")
+LINKS = "Demo: " + DEMO_URL + "\nCode: " + REPO_URL + (("\nVideo: " + VIDEO_URL) if VIDEO_URL else "")
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 M = json.load(open(os.path.join(BASE, "modelo", "metrics.json"), encoding="utf-8"))
@@ -173,7 +171,7 @@ bullets(s, .6, 1.8, 7.3, 4.8, [
     "Methodology tab states every limitation."], 18)
 card = s.shapes.add_shape(1, Inches(8.2), Inches(1.9), Inches(4.6), Inches(2.6)); card.fill.solid(); card.fill.fore_color.rgb = CARD; card.line.fill.background()
 text(s, 8.4, 2.0, 4.2, .5, "Links", 18, True, GREEN)
-text(s, 8.4, 2.6, 4.2, 1.9, f"Demo: {DEMO_URL}\nCode: {REPO_URL}\nVideo: {VIDEO_URL}", 13)
+text(s, 8.4, 2.6, 4.2, 1.9, LINKS, 13)
 
 # 8 ─ innovation
 s = slide("Innovation & originality", "What is different from typical fraud submissions")
@@ -205,7 +203,7 @@ bullets(s, .6, 1.5, 12.1, 5.3, [
 # 11 ─ close
 s = slide("Thank you", "Fraud Graph · DataNova 2026 · Cybersecurity & Fraud Detection")
 text(s, .6, 2.4, 12, .6, TEAM, 18, False, WHITE)
-text(s, .6, 3.4, 12, 2.2, f"Demo: {DEMO_URL}\nCode: {REPO_URL}\nVideo: {VIDEO_URL}", 16, False, SOFT)
+text(s, .6, 3.4, 12, 2.2, LINKS, 16, False, SOFT)
 text(s, .6, 5.7, 12, .8, "Stack: Python · CatBoost · scikit-learn · NetworkX · SHAP · Plotly · Streamlit · pandas  (all open-source, acknowledged)", 13, False, SOFT)
 
 out = os.path.join(BASE, "DN-FN-01_Fraud_Detection.pptx")
