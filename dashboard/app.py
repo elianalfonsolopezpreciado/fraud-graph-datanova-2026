@@ -66,7 +66,7 @@ with tab_over:
     st.subheader("Does the graph actually help? Ablation on the held-out future")
     a, b, c, d = st.columns(4)
     a.metric("PR-AUC  (graph)", f"{G['pr_auc']:.3f}", f"{G['pr_auc'] - T['pr_auc']:+.3f} vs no-graph")
-    b.metric("Recall @ FPR≈1%", f"{G['recall_flag']:.1%}", f"{G['recall_flag'] - T['recall_flag']:+.1%}")
+    b.metric("Recall of flagged (MEDIUM+HIGH)", f"{G['recall_flag']:.1%}", f"{G['recall_flag'] - T['recall_flag']:+.1%}")
     c.metric("Precision of HIGH (block)", f"{G['alto_precision']:.1%}")
     d.metric("False-positive rate", f"{G['fpr_flag']:.2%}", f"{G['fpr_flag'] - T['fpr_flag']:+.2%}", delta_color="inverse")
     lo, hi = metrics["delta_pr_auc_IC95_bootstrap"]
