@@ -13,10 +13,13 @@ from pptx.enum.text import PP_ALIGN
 
 # ----------------------------- EDIT BEFORE SUBMITTING -----------------------------
 TEAM = "Solo project — Elian Alfonso López Preciado (data, modeling, dashboard, presentation)"
-DEMO_URL = "<LIVE DEMO URL>"
-REPO_URL = "<GITHUB REPO URL>"
-VIDEO_URL = "<VIDEO URL (optional)>"
+DEMO_URL = "https://fraud-graph-datanova-2026.streamlit.app/"
+REPO_URL = "https://github.com/elianalfonsolopezpreciado/fraud-graph-datanova-2026"
+VIDEO_URL = ""  # optional: paste the YouTube link when the video exists
 # -----------------------------------------------------------------------------------
+LINKS = f"Demo: {DEMO_URL}
+Code: {REPO_URL}" + (f"
+Video: {VIDEO_URL}" if VIDEO_URL else "")
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 M = json.load(open(os.path.join(BASE, "modelo", "metrics.json"), encoding="utf-8"))
