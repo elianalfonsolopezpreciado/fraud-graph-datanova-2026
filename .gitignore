@@ -1,0 +1,9 @@
+catboost_info/
+__pycache__/
+*.pyc
+data/elliptic/
+# local working notes and generated deliverables
+SUBMISSION.md
+GUIA_VIDEO.md
+archive/
+*.pptx

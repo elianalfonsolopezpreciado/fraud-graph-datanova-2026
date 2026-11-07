@@ -1,0 +1,42 @@
+{
+  "features": [
+    "amount",
+    "hour",
+    "hora_no_laboral",
+    "amount_vs_user_avg",
+    "tx_ultima_hora_user",
+    "nuevo_dispositivo_para_user",
+    "nuevo_ip_para_user",
+    "user_tx_previas",
+    "g_user_n_dispositivos",
+    "g_user_n_ips",
+    "g_dev_n_usuarios",
+    "g_ip_n_usuarios",
+    "g_dev_fraude_previo",
+    "g_ip_fraude_previo",
+    "g_user_fraude_previo",
+    "g_merchant_tasa_fraude",
+    "g_dist_a_fraude"
+  ],
+  "thr_alto": 0.6138661136665974,
+  "thr_medio": 0.3090483726178581,
+  "descripciones": {
+    "amount": "Transaction amount",
+    "hour": "Hour of day",
+    "hora_no_laboral": "Night-time transaction (before 6h / after 22h)",
+    "amount_vs_user_avg": "Amount vs the user's historical average",
+    "tx_ultima_hora_user": "User's transactions in the last hour",
+    "nuevo_dispositivo_para_user": "Device never seen for this user",
+    "nuevo_ip_para_user": "IP never seen for this user",
+    "user_tx_previas": "User tenure (previous transactions)",
+    "g_user_n_dispositivos": "[Graph] Distinct devices used by the user",
+    "g_user_n_ips": "[Graph] Distinct IPs used by the user",
+    "g_dev_n_usuarios": "[Graph] Other users who shared the device",
+    "g_ip_n_usuarios": "[Graph] Other users who shared the IP",
+    "g_dev_fraude_previo": "[Graph] Prior confirmed frauds on the device",
+    "g_ip_fraude_previo": "[Graph] Prior confirmed frauds on the IP",
+    "g_user_fraude_previo": "[Graph] Prior confirmed frauds of the user",
+    "g_merchant_tasa_fraude": "[Graph] Confirmed fraud rate of the merchant",
+    "g_dist_a_fraude": "[Graph] Hops to a confirmed-fraud account/device/IP"
+  }
+}

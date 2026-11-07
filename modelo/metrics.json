@@ -1,0 +1,154 @@
+{
+  "protocolo": "split temporal 60/10/30, features sin fuga, retraso de etiquetas 24h",
+  "datos": "SINTÉTICOS (generador propio, semilla 42)",
+  "n": {
+    "n_train": 7171,
+    "n_val": 1195,
+    "n_test": 3586,
+    "fraude_test": 134,
+    "fraude_rate_test": 0.0373675404350251
+  },
+  "umbral_alto": 0.6138661136665974,
+  "umbral_medio": 0.3090483726178581,
+  "fpr_objetivo_alto": 0.003,
+  "fpr_objetivo_medio": 0.02,
+  "principal_tabular": {
+    "pr_auc": 0.6134498881309017,
+    "roc_auc": 0.9305291330139568,
+    "recall_flag": 0.6417910447761194,
+    "precision_flag": 0.5341614906832298,
+    "fpr_flag": 0.021726535341830822,
+    "alto_n": 80,
+    "alto_precision": 0.7375,
+    "alto_recall": 0.44029850746268656,
+    "TP": 86,
+    "FP": 75,
+    "FN": 48,
+    "TN": 3377,
+    "thr_alto": 0.8391626679446127,
+    "thr_medio": 0.508449568813024
+  },
+  "principal_grafo": {
+    "pr_auc": 0.7763907826196507,
+    "roc_auc": 0.966549782950831,
+    "recall_flag": 0.746268656716418,
+    "precision_flag": 0.5714285714285714,
+    "fpr_flag": 0.021726535341830822,
+    "alto_n": 108,
+    "alto_precision": 0.7962962962962963,
+    "alto_recall": 0.6417910447761194,
+    "TP": 100,
+    "FP": 75,
+    "FN": 34,
+    "TN": 3377,
+    "thr_alto": 0.6138661136665974,
+    "thr_medio": 0.3090483726178581
+  },
+  "principal_isolation_forest": {
+    "pr_auc": 0.5440216387276243,
+    "roc_auc": 0.8911576243925218
+  },
+  "delta_pr_auc_grafo_vs_tabular": 0.16294089448874893,
+  "delta_pr_auc_IC95_bootstrap": [
+    0.09856806713669486,
+    0.2216962330494228
+  ],
+  "anillos": {
+    "total_en_test": 4,
+    "detectados": 4,
+    "detalle": [
+      {
+        "anillo": 0,
+        "tx_test": 4,
+        "detectado": true,
+        "tx_marcadas": 4
+      },
+      {
+        "anillo": 1,
+        "tx_test": 4,
+        "detectado": true,
+        "tx_marcadas": 4
+      },
+      {
+        "anillo": 2,
+        "tx_test": 6,
+        "detectado": true,
+        "tx_marcadas": 6
+      },
+      {
+        "anillo": 3,
+        "tx_test": 5,
+        "detectado": true,
+        "tx_marcadas": 5
+      }
+    ]
+  },
+  "recall_por_tipo_fraude": {
+    "aislado": 0.6458333333333334,
+    "anillo": 1.0,
+    "mula": 1.0
+  },
+  "shap_top_feature": "amount",
+  "shap_peso_features_grafo": 0.3795286805028639,
+  "shap_rank_dist_a_fraude": 16,
+  "decision_buckets": {
+    "ALTO": {
+      "n": 108,
+      "fraudes": 86
+    },
+    "MEDIO": {
+      "n": 67,
+      "fraudes": 14
+    },
+    "BAJO": {
+      "n": 3411,
+      "fraudes": 34
+    }
+  },
+  "robustez_5_seeds": {
+    "tabular": {
+      "pr_auc": {
+        "mean": 0.6631988105092291,
+        "std": 0.05678958783609995
+      },
+      "roc_auc": {
+        "mean": 0.949763869505251,
+        "std": 0.019550211006816504
+      },
+      "recall_flag": {
+        "mean": 0.726035668181171,
+        "std": 0.08085095253849717
+      },
+      "precision_flag": {
+        "mean": 0.43567461241844346,
+        "std": 0.07159768498630795
+      },
+      "fpr_flag": {
+        "mean": 0.03712225144220683,
+        "std": 0.013596672294604636
+      }
+    },
+    "tabular+grafo": {
+      "pr_auc": {
+        "mean": 0.8147936957331542,
+        "std": 0.03234849284861742
+      },
+      "roc_auc": {
+        "mean": 0.9742037813802336,
+        "std": 0.007999675127009194
+      },
+      "recall_flag": {
+        "mean": 0.8147594530638124,
+        "std": 0.05376719596054465
+      },
+      "precision_flag": {
+        "mean": 0.5654359049537208,
+        "std": 0.04559697264053292
+      },
+      "fpr_flag": {
+        "mean": 0.023430726288717653,
+        "std": 0.0025963331312860503
+      }
+    }
+  }
+}
